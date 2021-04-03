@@ -7,6 +7,7 @@
 			*{
 				margin: 0;
 				padding: 0;
+				border: 10px solid;
 			}
 			
 			html,body{
@@ -33,7 +34,8 @@
 		
 		window.onload=function(){
 			var inner1=document.querySelector("#inner1");
-			var 
+			var point=inner1.getBoundingClientRect();
+			console.log(point);
 		}
 	</script>
 </html>
