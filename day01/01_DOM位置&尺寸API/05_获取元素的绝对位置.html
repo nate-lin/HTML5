@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			#wrap{position: absolute;background: pink;left: 200px;top: 200px;}
+			#inner1{position: absolute;background: deeppink;left: 150px;top: 150px;}
+			div{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<div id="wrap">wrap
+			<div id="inner1">
+				inner1
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		/*
+		 获取元素页面中的位置
+		 	绝对位置：到body的距离
+		 	相对位置：到视口的距离
+		 */
+		window.onload=function(){
+			var inner1=document.querySelector("#inner1");
+			var point=getPointAb(inner1);
+			function getPointAb(node){
+				/*while(){
+					
+				}*/
+			}
+			
+		}
+	</script>
+</html>

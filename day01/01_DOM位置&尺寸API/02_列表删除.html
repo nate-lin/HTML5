@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>		
+	</head>
+	<body id="body">			
+		<ul class="list">
+			<li>xfz<a href="javascript:;">删除</a></li>
+			<li>xfz2<a href="javascript:;">删除</a></li>
+			<li>xfz22<a href="javascript:;">删除</a></li>
+			<li>xfz222<a href="javascript:;">删除</a></li>
+			<li>xfz2222<a href="javascript:;">删除</a></li>			
+		</ul>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			//假删除
+			//数据是绝对重要的
+			var aNodes=document.querySelectorAll(".list > li >a");
+			for (var i = 0; i < aNodes.length; i++) {
+				aNodes[i].onClick=function(){
+					this.parentNode.style.display="none";
+				}
+			}			
+		}
+	</script>
+</html>
