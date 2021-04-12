@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html id="html" style="margin: 50px;">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+				height:100% ;
+				overflow: hidden;
+			}
+			#wrap{
+				width: 200px;
+				height: 200px;
+				padding: 50px;
+				border: 10px solid;
+				margin: 60px;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<div id="wrap" >wrap
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		
+		window.onload=function(){
+			//document.documentElement.clientWidth并不是银标签的可视区域，就是视口2的大小
+			var w=document.documentElement.clientWidth;
+			//document.documentElement.offsetWith 银标签的border-box
+			//var h=document.documentElement.clientHeight;
+			var w2=document.documentElement.offsetWidth;
+			console.log(w,W2);
+		}
+	</script>
+</html>

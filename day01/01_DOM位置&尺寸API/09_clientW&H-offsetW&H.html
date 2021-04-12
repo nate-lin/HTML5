@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#wrap{position: absolute;background: pink;left: 200px;top: 200px;}
+			div{
+				width: 200px;
+				height: 200px;
+				padding: 50px;
+				border: 10px solid;
+				margin: 60px;
+			}
+		</style>
+	</head>
+	<body id="body"style="height: 3000px;">
+		<div id="wrap" >wrap
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		
+		window.onload=function(){
+			var wrap=document.querySelector("#wrap");
+			//clientWidth;padding box(可视区域)
+			console.log(wrap.clientWidth,wrap.clientHeight);
+			//offsetWidth;padding box(可视区域)
+			console.log(wrap.offsetWidth,wrap.offsetHeight);
+		}
+	</script>
+</html>
