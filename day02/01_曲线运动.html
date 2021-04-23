@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#app{
+				position: absolute;
+				left: 200px;
+				top: 300px;
+				width: 10px;
+				height: 10px;
+				background: black;
+			}
+			.follow{
+				position: absolute;
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app"></div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var appNode=document.querySelector("#app");
+			var startX=appNode.offsetLeft;
+			var startY=appNode.offsetTop;
+			//角度
+			var deg=0;
+			//Y轴
+			var stepY=100;
+			//X轴
+			var stepX=50;
+			setInterval(function(){
+				deg++;
+				
+				appNode.style.left=startX+(deg*Math.PI/180)*stepX/2+"px";
+				appNode.style.top=startY+Math.sin(deg*Math.PI/180)*stepY*2+"px";
+				//打印运行轨迹
+				var div=document.createElement("div");
+				div.classList.add("follow");
+				div.style.left=appNode.offsetLeft+"px";
+				div.style.top=appNode.offsetTop+"px";
+				document.body.appendChild(div);
+			},1000/60)
+		}
+	</script>
+</html>
